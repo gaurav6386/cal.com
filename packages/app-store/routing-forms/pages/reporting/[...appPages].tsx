@@ -119,7 +119,7 @@ const Result = ({ formId, jsonLogicQuery }: { formId: string; jsonLogicQuery: Js
           ref={buttonInView.ref}
           loading={isFetchingNextPage}
           disabled={!hasNextPage}
-          onClick={() => fetchNextPage()}>
+          onClick={() => hasNextPage && fetchNextPage()}>
           {hasNextPage ? t("load_more_results") : t("no_more_results")}
         </Button>
       )}
